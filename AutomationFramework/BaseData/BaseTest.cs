@@ -1,5 +1,4 @@
 ﻿
-using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
@@ -9,7 +8,6 @@ namespace AutomationFramework.BaseData
     {
         public IWebDriver Driver { get; private set; }
 
-        [SetUp]
         public void PrepareDriver() 
         {
             Driver = new ChromeDriver();
@@ -17,10 +15,7 @@ namespace AutomationFramework.BaseData
             Driver.Navigate().GoToUrl("http://demo.automationtesting.in/Index.html");
         }
 
-        [TearDown]
-        public void QuitDriver()
-        {
-            Driver.Quit();
-        }
+
     }
 }
+
