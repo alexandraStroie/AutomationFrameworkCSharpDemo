@@ -23,6 +23,12 @@ namespace AutomationFramework.BaseData
         [TearDown]
         public void QuitDriver()
         {
+            var TestResult = TestContext.CurrentContext.Result.Outcome.Status.ToString();
+
+            if (TestResult.Equals("Failed")) {
+                ExtReport.entryReport("failed", TestContext.CurrentContext.Result.Message.ToString(),Driver);
+            }
+
             ExtReport.GenerateReport();
             Driver.Quit();
         }
