@@ -1,4 +1,5 @@
 ﻿
+using AutomationFramework.resourceUtility;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
@@ -10,9 +11,10 @@ namespace AutomationFramework.BaseData
 
         public void PrepareDriver() 
         {
+            ResourceUtility resource = new ResourceUtility("driver.Driver"); 
             Driver = new ChromeDriver();
             Driver.Manage().Window.Maximize();
-            Driver.Navigate().GoToUrl("http://demo.automationtesting.in/Index.html");
+            Driver.Navigate().GoToUrl(resource.GetValue("URL"));
         }
 
 

@@ -37,7 +37,7 @@ namespace AutomationFramework.Tests
             AlertPage.CancelAlert();
             ExtReport.entryReport("pass", "cancel alert");
 
-            AlertPage.FillMessageAlert("My message");
+            AlertPage.FillMessageAlert(Resource.GetValue("AlertInput"));
             ExtReport.entryReport("pass", "fill alert with message");
 
 

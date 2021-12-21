@@ -6,7 +6,7 @@ using OpenQA.Selenium;
 
 namespace AutomationFramework.Tests
 {
-    public class SigninTest : BaseTest
+    public class SigninTest : Hooks
     {
         public PageMethods PMethods { get; private set; }
         public ElementMethods EMethods { get; private set; }

@@ -6,7 +6,7 @@ using NUnit.Framework;
 
 namespace AutomationFramework.Tests
 {
-    public class FrameTest : BaseTest
+    public class FrameTest : Hooks
     {
         public IndexPage IndexPage { get; private set; }
         public RegisterPage RegisterPage { get; private set; }
@@ -28,9 +28,9 @@ namespace AutomationFramework.Tests
             RegisterPage.NavigateToFramePage();
 
             // GO TO iFRAME
-            FramePage.singleFrameInteraction("First Test");
+            FramePage.singleFrameInteraction(Resource.GetValue("SingleFrameValue"));
 
-            FramePage.multipleFrameInteraction("Second Test");
+            FramePage.multipleFrameInteraction(Resource.GetValue("MultipleFrameValue"));
             
         }
     }

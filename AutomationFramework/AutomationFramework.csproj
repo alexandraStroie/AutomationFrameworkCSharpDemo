@@ -462,6 +462,22 @@
     <Compile Include="pages\SinginPage.cs" />
     <Compile Include="pages\WindowsPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="resources\driver\Driver.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Driver.resx</DependentUpon>
+    </Compile>
+    <Compile Include="resources\tests\AlertsTest.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlertsTest.resx</DependentUpon>
+    </Compile>
+    <Compile Include="resources\tests\FrameTest.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FrameTest.resx</DependentUpon>
+    </Compile>
+    <Compile Include="resourceUtility\ResourceUtility.cs" />
     <Compile Include="Tests\AlertsTest.cs" />
     <Compile Include="Tests\FrameTest.cs" />
     <Compile Include="Tests\RegisterTest.cs" />
@@ -481,6 +497,20 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="extent-config.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="resources\driver\Driver.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Driver.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\tests\AlertsTest.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AlertsTest.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\tests\FrameTest.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FrameTest.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

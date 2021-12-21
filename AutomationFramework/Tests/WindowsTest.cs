@@ -5,7 +5,7 @@ using NUnit.Framework;
 
 namespace AutomationFramework.Tests
 {
-    public class WindowsTest : BaseTest
+    public class WindowsTest : Hooks
     {
         public WindowsPage WindowsPage { get; private set; }
         public IndexPage IndexPage { get; private set; }

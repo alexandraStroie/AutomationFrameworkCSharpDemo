@@ -5,7 +5,7 @@ using NUnit.Framework;
 
 namespace AutomationFramework.Tests
 {
-    public class RegisterTest : BaseTest
+    public class RegisterTest : Hooks
     {
         public IndexPage IndexPage { get; private set; }
         public RegisterPage RegisterPage { get; private set; }

@@ -1,4 +1,5 @@
 ﻿using AutomationFramework.extentUtility;
+using AutomationFramework.resourceUtility;
 using NUnit.Framework;
 
 namespace AutomationFramework.BaseData
@@ -7,14 +8,16 @@ namespace AutomationFramework.BaseData
     {
 
         public ExtentReport ExtReport { get; set; }
-
+        public ResourceUtility Resource { get; private set; }
 
         [SetUp]
         public void initiateTest()
         {
             PrepareDriver();
-
+                
             var TestName = GetType().Name;
+
+            Resource = new ResourceUtility($"tests.{TestName}");
 
             ExtReport = new ExtentReport(TestName);
         }
